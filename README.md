@@ -103,3 +103,6 @@ python -m streamlit run app.py
 The application will be available at:
 
 http://localhost:8501
+### Screenshots:
+
+<img width="976" height="627" alt="Screenshot 2026-06-07 232749" src="https://github.com/user-attachments/assets/632ba78e-87ac-44f2-bb6b-66c2f8aced3f" />
