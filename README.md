@@ -6,7 +6,7 @@ The system uses semantic search to retrieve relevant information from the docume
 
 The objective is to ensure that answers are grounded in the provided document rather than relying solely on the model's general knowledge.
 
-Features
+### Features
 PDF document ingestion
 Document chunking using LangChain
 Semantic embeddings using HuggingFace Sentence Transformers
@@ -15,54 +15,31 @@ Context retrieval using similarity search
 Response generation using Mistral (via Ollama)
 Streamlit-based chat interface
 Source attribution for transparency and explainability
-Architecture
-User Question
-      │
-      ▼
-Retriever (ChromaDB)
-      │
-      ▼
-Relevant Chunks
-      │
-      ▼
-Prompt Construction
-      │
-      ▼
-Mistral (Ollama)
-      │
-      ▼
-Generated Answer
-      │
-      ▼
-Answer + Retrieved Sources
-Preprocessing Pipeline
+
+### Architecture
+User Question --> Retriever (ChromaDB) --> Relevant Chunks --> Prompt Construction --> Mistral (Ollama) --> Generated Answer --> Answer + Retrieved Sources
+### Preprocessing Pipeline
 PDF Document
-      │
-      ▼
 Text Extraction
-      │
-      ▼
 Chunking
-      │
-      ▼
 Embedding Generation
-      │
-      ▼
 Chroma Vector Database
-Tech Stack
-Backend
+
+### Tech Stack
+## Backend
 Python
 LangChain
 ChromaDB
 HuggingFace Embeddings
 Ollama
 Mistral LLM
-Frontend
+## Frontend
 Streamlit
-Development Environment
+### Development Environment
 Google Colab (Data Processing & Vector Database Creation)
 VS Code (Application Development)
-Project Structure
+
+### Project Structure
 RAG_Chatbot/
 
 ├── app.py
@@ -76,48 +53,34 @@ RAG_Chatbot/
 │   └── prompt.py
 │
 └── vectordb/
-Implementation Details
-1. Document Loading
+### Implementation Details
+1. Document Loading: The PDF document is loaded using LangChain's PDF loader.
 
-The PDF document is loaded using LangChain's PDF loader.
-
-2. Chunking
-
-The document is split into smaller overlapping chunks using:
-
+2. Chunking: The document is split into smaller overlapping chunks using:
 Chunk Size: 1000 characters
 Chunk Overlap: 200 characters
-
 This preserves context between chunks and improves retrieval quality.
 
-3. Embeddings
-
-Embeddings are generated using:
+3. Embeddings: Embeddings are generated using:
 
 BAAI/bge-small-en-v1.5
 
 This model converts text chunks into vector representations suitable for semantic similarity search.
 
-4. Vector Database
-
-ChromaDB is used to store document embeddings.
+4. Vector Database: ChromaDB is used to store document embeddings.
 
 The vector database is persisted locally and reused during application execution, avoiding repeated embedding generation.
 
-5. Retrieval
-
-For every user query:
+5. Retrieval: For every user query:
 
 The query is embedded.
 Top 3 most relevant chunks are retrieved.
 Retrieved chunks are used as context for the LLM.
-6. Response Generation
-
-The retrieved context and user query are combined into a prompt and sent to the Mistral model running locally through Ollama.
+6. Response Generation: The retrieved context and user query are combined into a prompt and sent to the Mistral model running locally through Ollama.
 
 The model generates responses grounded in the retrieved context.
 
-Installation
+### Installation
 Clone Repository
 git clone <repository-url>
 cd RAG_Chatbot
