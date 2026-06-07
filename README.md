@@ -106,3 +106,10 @@ http://localhost:8501
 ### Screenshots:
 
 <img width="976" height="627" alt="Screenshot 2026-06-07 232749" src="https://github.com/user-attachments/assets/632ba78e-87ac-44f2-bb6b-66c2f8aced3f" />
+<img width="1919" height="1067" alt="Screenshot 2026-06-07 232400" src="https://github.com/user-attachments/assets/9a7d5caa-d31c-4f54-8489-948a4963bc19" />
+
+<img width="1911" height="1081" alt="Screenshot 2026-06-07 232414" src="https://github.com/user-attachments/assets/70209a10-8d9d-4bc1-b56c-d2ecd9d05bbf" />
+
+<img width="1900" height="596" alt="Screenshot 2026-06-07 232423" src="https://github.com/user-attachments/assets/8c8bcc08-8d22-4b9e-aec1-7098afa98b34" />
+<img width="627" height="768" alt="Screenshot 2026-06-07 232620" src="https://github.com/user-attachments/assets/5f802ebf-f414-442c-87d2-e0b23e6e1481" />
+<img width="616" height="389" alt="Screenshot 2026-06-07 232708" src="https://github.com/user-attachments/assets/1d8a4ee4-1e5a-4e35-b83c-d9d252103237" />
